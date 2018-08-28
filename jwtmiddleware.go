@@ -17,8 +17,6 @@ var (
 )
 
 type (
-	// UserProperty default type to write jwt token to request context
-	UserProperty string
 	// MiddlewareOption used to define `functional options` approach
 	MiddlewareOption func(*options)
 	// TokenExtractor function to extract token and used to define custom extractors
@@ -107,7 +105,7 @@ func WithUserProperty(property interface{}) MiddlewareOption {
 // New creates an instance of the jwt middleware
 func New(opts ...MiddlewareOption) *Middleware {
 	defaults := &options{
-		userProperty:  UserProperty("user"),
+		userProperty:  "user",
 		signingMethod: jwt.SigningMethodHS256,
 		errorHandler:  onError,
 		extractor:     BearerExtractor,

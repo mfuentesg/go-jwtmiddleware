@@ -37,7 +37,7 @@ func TestNew(t *testing.T) {
 		t.Errorf("wrong default signingMethod got %v", m.options.signingMethod)
 	}
 
-	if reflect.TypeOf(m.options.userProperty) != reflect.TypeOf(UserProperty("")) {
+	if m.options.userProperty != "user" {
 		t.Errorf("expect an instance of jwtmiddleware.UserProperty type, got %v", reflect.TypeOf(m.options.userProperty))
 	}
 
