@@ -1,5 +1,6 @@
 # JWT Middleware
 
+[![GoDoc](https://godoc.org/github.com/mfuentesg/go-jwtmiddleware?status.svg)](https://godoc.org/github.com/mfuentesg/go-jwtmiddleware)
 [![Build Status](https://travis-ci.org/mfuentesg/go-jwtmiddleware.svg?branch=master)](https://travis-ci.org/mfuentesg/go-jwtmiddleware)
 [![codecov](https://codecov.io/gh/mfuentesg/go-jwtmiddleware/branch/master/graph/badge.svg)](https://codecov.io/gh/mfuentesg/go-jwtmiddleware)
 
