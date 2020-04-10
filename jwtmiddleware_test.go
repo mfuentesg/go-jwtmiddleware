@@ -11,6 +11,7 @@ import (
 )
 
 // token with HS256 algorithm
+// nolint
 const jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.XbPfbIHMI6arZ3Y922BhjWgQzWXcXNrz0ogtVhfEd2o"
 
 func extractor(_ *http.Request) (string, error) {
@@ -19,7 +20,7 @@ func extractor(_ *http.Request) (string, error) {
 
 func handlerFunc(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("OK"))
+	_, _ = w.Write([]byte("OK"))
 }
 
 func TestNew(t *testing.T) {
@@ -70,7 +71,7 @@ func TestNew(t *testing.T) {
 
 	m = New(WithErrorHandler(func(w http.ResponseWriter, r *http.Request, _ error) {
 		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("bad request"))
+		_, _ = w.Write([]byte("bad request"))
 	}))
 	w = httptest.NewRecorder()
 	r = httptest.NewRequest("GET", "/fake", nil)

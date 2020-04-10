@@ -39,7 +39,7 @@ type Middleware struct {
 
 func onError(w http.ResponseWriter, r *http.Request, _ error) {
 	w.WriteHeader(http.StatusUnauthorized)
-	w.Write([]byte("unauthorized"))
+	_, _ = w.Write([]byte("unauthorized"))
 }
 
 // BearerExtractor gets the jwt token from the `Authorization` header
