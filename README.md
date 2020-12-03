@@ -4,6 +4,13 @@
 [![Build Status](https://travis-ci.org/mfuentesg/go-jwtmiddleware.svg?branch=master)](https://travis-ci.org/mfuentesg/go-jwtmiddleware)
 [![codecov](https://codecov.io/gh/mfuentesg/go-jwtmiddleware/branch/master/graph/badge.svg)](https://codecov.io/gh/mfuentesg/go-jwtmiddleware)
 
+<a href="https://www.buymeacoffee.com/mfuentesg" target="_blank">
+   <img height="41" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" />
+</a>
+
+<br />
+<br />
+
 This package has as purpose will help you to check the validness of any token based on [JWT spec](https://tools.ietf.org/html/rfc7519).
 
 ## Getting started
