@@ -130,7 +130,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt"
 	mdw "github.com/mfuentesg/go-jwtmiddleware"
 )
 
@@ -169,7 +169,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt"
 	mdw "github.com/mfuentesg/go-jwtmiddleware"
 )
 
@@ -196,7 +196,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt"
 	mdw "github.com/mfuentesg/go-jwtmiddleware"
 )
 
@@ -230,7 +230,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt"
 	mdw "github.com/mfuentesg/go-jwtmiddleware"
 )
 
