@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go-version: [1.14, 1.15, 1.16, 1.17, 1.18]
+        go-version: [1.16, 1.17, 1.18]
     steps:
       - name: Set up Go
         uses: actions/setup-go@v1
@@ -33,4 +33,4 @@ jobs:
 
       - name: Run tests
         run: |
-          go test -race -bench=".*" -benchmem -covermode=atomic $(go list ./... | grep -v pb)
+          go test -race -bench=".*" -benchmem -covermode=atomic

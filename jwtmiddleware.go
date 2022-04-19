@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/golang-jwt/jwt"
+	"github.com/golang-jwt/jwt/v4"
 )
 
 var (
@@ -37,7 +37,7 @@ type Middleware struct {
 	options *options
 }
 
-func onError(w http.ResponseWriter, r *http.Request, _ error) {
+func onError(w http.ResponseWriter, _ *http.Request, _ error) {
 	w.WriteHeader(http.StatusUnauthorized)
 	_, _ = w.Write([]byte("unauthorized"))
 }
