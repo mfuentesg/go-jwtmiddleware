@@ -1,0 +1,36 @@
+on:
+  push:
+    branches: [master]
+  pull_request:
+    types: [opened, synchronize]
+
+name: Lint and Test
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: [1.16, 1.17, 1.18]
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: ${{ matrix.go-version }}
+        id: go
+
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v1
+
+      - name: Get dependencies
+        run: |
+          go mod download
+
+      - name: Execute linting
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b . v1.45.0
+          ./golangci-lint run ./...
+
+      - name: Run tests
+        run: |
+          go test -race -bench=".*" -benchmem -covermode=atomic

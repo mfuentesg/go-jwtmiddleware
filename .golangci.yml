@@ -13,17 +13,14 @@ linters:
     - gocyclo
     - gofmt
     - goimports
-    - golint
     - goprintffuncname
     - gosec
     - gosimple
     - govet
     - ineffassign
-    - interfacer
     - misspell
     - nakedret
     - rowserrcheck
-    - scopelint
     - staticcheck
     - structcheck
     - stylecheck
@@ -33,8 +30,10 @@ linters:
     - unused
     - varcheck
     - whitespace
+    - revive
 
 skip-dirs:
+  - pb
   - .github
 
 issues:

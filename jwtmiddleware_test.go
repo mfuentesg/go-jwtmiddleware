@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	jwt "github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt/v4"
 )
 
 // token with HS256 algorithm
